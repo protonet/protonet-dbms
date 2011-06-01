@@ -1,0 +1,102 @@
+/**
+ * DU BIST MIR SYMPATHISCH + protonet = <3
+ *
+ * Main red: color: #ca0012;
+ */
+body {
+  background: #fff;
+}
+
+.inner-body {
+  width: auto;
+}
+
+textarea, input, select {
+  font-family: tahoma,verdana,arial,"sans serif";
+  font-size: 11px;
+}
+
+header {
+  height: 48px;
+  padding: 2px 5px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid #666;
+  background-image: -moz-linear-gradient(100% 100% 90deg, #ccc, #fff);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ccc));
+  -moz-box-shadow: 0 0 8px #000;
+  -webkit-box-shadow: 0 0 8px #000;
+  box-shadow: 0 0 8px #000;
+}
+
+header .monster {
+  display: none;
+}
+
+header .logo {
+  background: url(logo_small.png) no-repeat;
+  margin-left: 10px;
+  left: 0;
+}
+
+section,
+aside {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#side {
+  background: #f6f0f0;
+  border-left: 2px solid #ca0012;
+  padding: 0;
+  top: 55px;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  width: 30%;
+}
+
+section.main {
+  width: 70%;
+  margin: 0;
+}
+
+.meep .avatar,
+#message-form .avatar {
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.widget {
+  border: 0;
+  padding: 0;
+}
+
+.widget h3 {
+  background: #ca0012;
+  font-size: 16px;
+  padding: 7px;
+}
+
+.widget .resize {
+  display: none;
+}
+
+#user-widget li.online a {
+  color: #ca0012;
+}
+
+#user-widget li a {
+  font-size: 14px;
+}
+
+#user-widget ul {
+  min-height: 300px;
+}
