@@ -11,7 +11,7 @@ body {
   width: auto;
 }
 
-textarea, input, select {
+body, textarea, input, select {
   font-family: tahoma,verdana,arial,"sans serif";
   font-size: 11px;
 }
@@ -21,13 +21,10 @@ header {
   padding: 2px 5px;
   overflow: hidden;
   position: relative;
-  z-index: 2;
   border-bottom: 1px solid #666;
-  background-image: -moz-linear-gradient(100% 100% 90deg, #ccc, #fff);
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ccc));
-  -moz-box-shadow: 0 0 8px #000;
-  -webkit-box-shadow: 0 0 8px #000;
-  box-shadow: 0 0 8px #000;
+  background: #ccc;
+  background: -moz-linear-gradient(100% 100% 90deg, #ccc, #fff);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ccc));
 }
 
 header .monster {
@@ -53,12 +50,12 @@ aside {
 
 #side {
   background: #f6f0f0;
-  border-left: 2px solid #ca0012;
   padding: 0;
-  top: 55px;
+  top: 0;
   right: 0;
   bottom: 0;
   position: absolute;
+  z-index: 2;
   width: 30%;
 }
 
@@ -74,18 +71,28 @@ section.main {
   -webkit-box-shadow: none;
 }
 
-.widget {
+#side {
+  border-left: 2px solid #ca0012;
+}
+
+#user-widget {
   border: 0;
   padding: 0;
+  overflow: visible;
+  position: static;
 }
 
-.widget h3 {
+#user-widget h3 {
+  margin-left: -2px;
   background: #ca0012;
+  background: -moz-linear-gradient(100% 100% 90deg, #ca0012, #e2737d);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e2737d), to(#ca0012));
+  line-height: 49px;
   font-size: 16px;
-  padding: 7px;
+  padding: 2px 10px;
 }
 
-.widget .resize {
+#user-widget .resize {
   display: none;
 }
 
