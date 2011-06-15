@@ -1,7 +1,8 @@
 /**
  * DU BIST MIR SYMPATHISCH + protonet = <3
  *
- * Main red: color: #ca0012;
+ * Main red: #ca0012
+ * Light red: #F6F0F0
  */
 body {
   background: #fff;
@@ -17,14 +18,12 @@ body, textarea, input, select {
 }
 
 header {
-  height: 48px;
-  padding: 2px 5px;
+  height: 46px;
   overflow: hidden;
   position: relative;
-  border-bottom: 1px solid #666;
-  background: #ccc;
-  background: -moz-linear-gradient(100% 100% 90deg, #ccc, #fff);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ccc));
+  background: #ddd;
+  background: -moz-linear-gradient(100% 100% 90deg, #ddd, #fff);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ddd));
 }
 
 header .monster {
@@ -35,6 +34,7 @@ header .logo {
   background: url(logo_small.png) no-repeat;
   margin-left: 10px;
   left: 0;
+  top: 0;
 }
 
 section,
@@ -55,12 +55,13 @@ aside {
   right: 0;
   bottom: 0;
   position: absolute;
-  z-index: 2;
-  width: 30%;
+  width: 26%;
+  border-left: 2px solid #ca0012;
+  z-index: 6;
 }
 
 section.main {
-  width: 70%;
+  width: 74%;
   margin: 0;
   position: static;
 }
@@ -70,10 +71,6 @@ section.main {
   box-shadow: none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
-}
-
-#side {
-  border-left: 2px solid #ca0012;
 }
 
 #user-widget {
@@ -88,9 +85,11 @@ section.main {
   background: #ca0012;
   background: url(butterflies.png) no-repeat right center, -moz-linear-gradient(100% 100% 90deg, #ca0012, #e2737d);
   background: url(butterflies.png) no-repeat right center, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e2737d), to(#ca0012));
-  line-height: 49px;
+  line-height: 33px;
   font-size: 16px;
-  padding: 2px 10px;
+  font-weight: bold;
+  padding: 13px 0 0;
+  text-align: center;
 }
 
 #user-widget .resize {
@@ -111,8 +110,8 @@ section.main {
 
 #channels {
   position: absolute;
-  top: 20px;
-  left: 200px;
+  top: 13px;
+  left: 210px;
   padding: 0;
   margin: 0;
   border: 0;
@@ -120,4 +119,91 @@ section.main {
 
 #manage-channels {
   display: none;
+}
+
+#channels li a,
+#channels li a:active {
+  width: 107px;
+  height: 21px;
+  display: block;
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  text-align: center;
+  background: url(button.png) no-repeat -107px 0;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 9px 0 0;
+  line-height: inherit;
+}
+
+#channels li a:hover,
+#channels .active {
+  background: url(button.png) no-repeat 0 0;
+}
+
+#channels li a,
+#channels li a:hover,
+#channels .active {
+  color: #fff;
+}
+
+#channels .active,
+#channels .active:hover {
+  border: 0;
+  line-height: inherit;
+}
+
+#message-form {
+  margin: 1px 0 1px 1px;
+  background: #ca0012;
+  padding: 12px 12px 12px 50px;
+  position: relative;
+}
+
+#message-form .avatar {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  padding: 0;
+  height: auto;
+  width: auto;
+}
+
+#message-form .avatar img {
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 3px #000;
+  padding: 0;
+}
+
+#textarea-wrapper {
+  border: 0;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+#textarea-wrapper,
+#textarea-wrapper input,
+#message-form .avatar img {
+  border-radius: 2px;
+}
+
+#textarea-wrapper textarea {
+  font-size: 14px;
+  width: 90%;
+}
+
+#textarea-wrapper input {
+  background: #e2737d url(return.png) center center no-repeat;
+  background: url(return.png) center center no-repeat, -moz-linear-gradient(100% 100% 90deg, #ca0012, #e2737d);
+  background: url(return.png) center center no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e2737d), to(#ca0012));
+}
+
+#textarea-wrapper input:hover {
+  background: #ca0012 url(return.png) center center no-repeat;
+}
+
+#text-extension-preview {
+  background: #F6F0F0;
 }
