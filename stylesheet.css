@@ -342,3 +342,7 @@ a.close-link:hover {
 section.main.sub {
   width: 100%;
 }
+
+.click-to-flash-teaser {
+  background-image: url(click_to_flash_teaser.png) !important;
+}
