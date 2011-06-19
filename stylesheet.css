@@ -3,6 +3,7 @@
  *
  * Main red: #AC0016
  * Light red: #F6F0F0
+ * Orange: #f2736a
  */
 body {
   background: #fff;
@@ -111,9 +112,22 @@ section.main {
   min-height: 300px;
 }
 
+#user-widget li a {
+  background: url(user.png) 0 0 no-repeat;
+  padding-left: 32px;
+}
+
+#user-widget li.online a {
+  background-position: 3px 5px;
+}
+
+#user-widget li.typing a {
+  background-position: 3px -20px;
+}
+
 #channels {
   position: absolute;
-  top: 13px;
+  top: 10px;
   left: 210px;
   padding: 0;
   margin: 0;
@@ -156,10 +170,11 @@ section.main {
 #channels .active:hover {
   border: 0;
   line-height: inherit;
+  margin-top: 0;
 }
 
 #message-form {
-  margin: 1px 0 1px 1px;
+  margin: 1px 0 0 1px;
   background: #AC0016;
   padding: 12px 12px 12px 50px;
   position: relative;
@@ -199,12 +214,14 @@ section.main {
 
 #textarea-wrapper input {
   background: #e2737d url(return.png) center center no-repeat;
-  background: url(return.png) center center no-repeat, -moz-linear-gradient(100% 100% 90deg, #AC0016, #e2737d);
-  background: url(return.png) center center no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e2737d), to(#AC0016));
+  background: url(return.png) center center no-repeat, -moz-linear-gradient(100% 100% 90deg, #f99973, #f2736a);
+  background: url(return.png) center center no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f2736a), to(#f99973));
+  width: 9%;
 }
 
 #textarea-wrapper input:hover {
-  background: #AC0016 url(return.png) center center no-repeat;
+  background: url(return.png) center center no-repeat, -moz-linear-gradient(100% 100% 90deg, #ef6213, #eb2903);
+  background: url(return.png) center center no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eb2903), to(#ef6213));
 }
 
 #text-extension-preview {
@@ -226,19 +243,19 @@ section.main {
   -moz-border-radius: 0 !important;
   -webkit-border-radius: 0 !important;
   background: #fff !important;
-  border: 1px solid #AC0016;
-  padding: 6px;
-  padding-left: 45px;
-  margin: 12px;
+  border: 0;
+  border-bottom: 1px solid #AC0016;
+  padding: 5px;
+  padding-left: 57px;
+  margin: 0 0 0 1px;
 }
 
 .meep .avatar {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  background: #AC0016;
-  padding: 1px 2px 1px 1px;
+  top: 2px;
+  left: 14px;
+  bottom: auto;
+  padding: 0;
   width: auto;
   height: auto;
 }
@@ -260,6 +277,10 @@ section.main {
   display: none;
 }
 
+.meep.separator:after {
+  display: none;
+}
+
 .text-extension-results.flash .media a:active:after,
 .text-extension-results.flash .media a:hover:after {
   background: #AC0016;
@@ -275,4 +296,37 @@ a.close-link:hover {
 
 .meep-loading-indicator {
   background: url(loading_indicator.gif) center center no-repeat;
+}
+
+.context-menu {
+  border: 1px solid #AC0016;
+}
+
+.context-menu li {
+  color: #AC0016;
+  border-bottom: 1px solid #AC0016;
+}
+
+.context-menu:before {
+  border-bottom: 7px solid #AC0016;
+}
+
+.reply.channel {
+  background: #f2736a !important;
+  color: #fff !important;
+}
+
+.reply.user {
+  color: #000 !important;
+  border: 1px solid #000;
+}
+
+.reply.user.myself {
+  color: #fff !important;
+  border: 0;
+  background: #000 !important;
+}
+
+.reply-from-channel a {
+  color: #AC0016 !important;
 }
