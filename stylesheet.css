@@ -138,6 +138,14 @@ section.main {
   display: none;
 }
 
+#channels ul {
+  overflow: auto;
+}
+
+#channels .badge {
+  background: #AC0016;
+}
+
 #channels li a,
 #channels li a:active {
   width: 107px;
@@ -329,4 +337,8 @@ a.close-link:hover {
 
 .reply-from-channel a {
   color: #AC0016 !important;
+}
+
+section.main.sub {
+  width: 100%;
 }
