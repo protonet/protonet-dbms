@@ -26,9 +26,9 @@ header {
   height: 46px;
   overflow: hidden;
   position: relative;
-  background: #ddd;
-  background: -moz-linear-gradient(100% 100% 90deg, #ddd, #fff);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ddd));
+  background: #ddd !important;
+  background: -moz-linear-gradient(100% 100% 90deg, #ddd, #fff) !important;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ddd)) !important;
 }
 
 header .monster {
@@ -156,7 +156,7 @@ section.main {
   -moz-border-radius: 0;
   border-radius: 0;
   text-align: center;
-  background: url(button.png) no-repeat -107px 0;
+  background: url(tab.png) no-repeat -107px 0;
   font-weight: bold;
   font-size: 14px;
   padding: 9px 0 0;
@@ -165,7 +165,7 @@ section.main {
 
 #channels li a:hover,
 #channels .active {
-  background: url(button.png) no-repeat 0 0;
+  background: url(tab.png) no-repeat 0 0;
 }
 
 #channels li a,
@@ -345,4 +345,61 @@ section.main.sub {
 
 .click-to-flash-teaser {
   background-image: url(click_to_flash_teaser.png) !important;
+}
+
+#single-login {
+  margin: 40px 0 0;
+  top: auto;
+  position: static;
+  width: auto;
+}
+
+#login h1 {
+  color: #AC0016;
+}
+
+header.login {
+  border-bottom: 1px solid #AC0016;
+}
+
+button,
+button:after {
+  background: url(button.png) no-repeat 0 0;
+}
+
+button:hover {
+  background: url(button.png) no-repeat 0 bottom;
+}
+
+button:hover:after {
+  background: url(button.png) no-repeat right bottom;
+}
+
+button {
+  font-weight: bold;
+  margin: 0;
+  border: 0;
+  font-size: 14px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  height: 27px;
+  padding: 0 0 0 20px;
+  position: relative;
+}
+
+button:after {
+  content: "";
+  width: 20px;
+  height: 27px;
+  position: absolute;
+  right: -20px;
+  top: 0;
+  background-position: right top;
+}
+
+button {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
