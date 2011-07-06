@@ -18,7 +18,8 @@ body, textarea, input, select {
   font-size: 11px;
 }
 
-a, a:hover {
+a,
+a:hover {
   color: #AC0016;
 }
 
@@ -210,24 +211,35 @@ section.main {
 }
 
 #textarea-wrapper,
-#textarea-wrapper input,
+#textarea-wrapper [type=submit],
 #message-form .avatar img {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
   border-radius: 2px;
 }
 
+#textarea-wrapper menu {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  bottom: 2px;
+  height: auto;
+}
+
 #textarea-wrapper textarea {
+  padding-left: 34px;
   font-size: 14px;
   width: 90%;
 }
 
-#textarea-wrapper input {
+#textarea-wrapper [type=submit] {
   background: #e2737d url(return.png) center center no-repeat;
   background: url(return.png) center center no-repeat, -moz-linear-gradient(100% 100% 90deg, #f99973, #f2736a);
   background: url(return.png) center center no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f2736a), to(#f99973));
-  width: 9%;
+  width: 10%;
 }
 
-#textarea-wrapper input:hover {
+#textarea-wrapper [type=submit]:hover {
   background: url(return.png) center center no-repeat, -moz-linear-gradient(100% 100% 90deg, #ef6213, #eb2903);
   background: url(return.png) center center no-repeat, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eb2903), to(#ef6213));
 }
@@ -348,7 +360,8 @@ section.main.sub {
 }
 
 #single-login {
-  margin: 40px 0 0;
+  margin: 0;
+  padding-top: 40px;
   top: auto;
   position: static;
   width: auto;
@@ -377,12 +390,17 @@ button:hover:after {
 
 button {
   font-weight: bold;
+  color: #fff !important;
+  text-shadow: none;
   margin: 0;
   border: 0;
   font-size: 14px;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
   height: 27px;
   padding: 0 0 0 20px;
   position: relative;
@@ -396,10 +414,4 @@ button:after {
   right: -20px;
   top: 0;
   background-position: right top;
-}
-
-button {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
 }
