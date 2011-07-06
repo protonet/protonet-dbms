@@ -411,6 +411,7 @@ button {
   height: 27px;
   padding: 0 0 0 20px;
   position: relative;
+  overflow: visible;
 }
 
 button:after {
