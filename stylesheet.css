@@ -396,6 +396,7 @@ button:hover:after {
 }
 
 button {
+  font: inherit;
   font-weight: bold;
   color: #fff !important;
   text-shadow: none;
@@ -410,17 +411,17 @@ button {
   box-shadow: none;
   height: 27px;
   padding: 0 0 0 20px;
-  position: relative;
   overflow: visible;
+  vertical-align: middle;
 }
 
 button:after {
+  display: inline-block;
+  vertical-align: middle;
   content: "";
   width: 20px;
   height: 27px;
-  position: absolute;
-  right: -20px;
-  top: 0;
+  background-color: #fff;
   background-position: right top;
 }
 
