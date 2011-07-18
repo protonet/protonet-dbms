@@ -4,6 +4,7 @@
  * Main red: #AC0016
  * Light red: #F6F0F0
  * Orange: #f2736a
+ * Light orange: #ffc48a
  */
 body {
   background: #fff;
@@ -23,13 +24,12 @@ a:hover {
   color: #AC0016;
 }
 
+/* ------------------------------------- HEADER ------------------------------------- */
 header {
   height: 46px;
   overflow: hidden;
   position: relative;
-  background: #ddd !important;
-  background: -moz-linear-gradient(100% 100% 90deg, #ddd, #fff) !important;
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ddd)) !important;
+  background: #fff !important;
 }
 
 header .monster {
@@ -42,6 +42,23 @@ header .logo {
   top: 0;
 }
 
+#single-login {
+  margin: 0;
+  padding-top: 40px;
+  top: auto;
+  position: static;
+  width: auto;
+}
+
+#login h1 {
+  color: #AC0016;
+}
+
+header.login {
+  border-bottom: 1px solid #AC0016;
+}
+
+/* ------------------------------------- SCAFFOLD ------------------------------------- */
 section,
 aside {
   -moz-box-shadow: none;
@@ -71,13 +88,11 @@ section.main {
   position: static;
 }
 
-.meep .avatar,
-#message-form .avatar {
-  box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
+section.main.sub {
+  width: 100%;
 }
 
+/* ------------------------------------- USER WIDGET ------------------------------------- */
 #user-widget {
   border: 0;
   padding: 0;
@@ -107,6 +122,7 @@ section.main {
 
 #user-widget li a {
   font-size: 14px;
+  line-height: 24px;
 }
 
 #user-widget ul {
@@ -126,6 +142,7 @@ section.main {
   background-position: 3px -20px;
 }
 
+/* ------------------------------------- CHANNELS ------------------------------------- */
 #channels {
   position: absolute;
   top: 10px;
@@ -182,6 +199,12 @@ section.main {
   margin-top: 0;
 }
 
+#channels .badge {
+  padding: 2px;
+  background: #AC0016;
+}
+
+/* ------------------------------------- MESSAGE FORM ------------------------------------- */
 #message-form {
   margin: 1px 1px 0 0;
   background: #AC0016;
@@ -196,6 +219,13 @@ section.main {
   padding: 0;
   height: auto;
   width: auto;
+}
+
+#message-form .avatar,
+.meep .avatar {
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
 }
 
 #message-form .avatar img {
@@ -250,6 +280,20 @@ section.main {
   background-color: #F6F0F0 !important;
 }
 
+#textarea-wrapper menu [data-extension] {
+  background: transparent url(spr_message_options.png) no-repeat 0 0;
+}
+
+#textarea-wrapper menu [data-extension="smiley"] {
+  background: transparent url(spr_message_options.png) no-repeat 4px 2px;
+}
+
+#textarea-wrapper menu [data-extension="snapshot"] {
+  background: transparent url(spr_message_options.png) no-repeat 4px -28px;
+}
+
+
+/* ------------------------------------- MESSAGES ------------------------------------- */
 .meep,
 .text-extension-results,
 #message-form textarea {
@@ -308,33 +352,8 @@ section.main {
   background: #AC0016;
 }
 
-a.close-link {
-  color: #fff !important;
-}
-
-a.close-link:hover {
-  background: #AC0016;
-}
-
 .meep-loading-indicator {
   background: url(loading_indicator.gif) center center no-repeat;
-}
-
-.context-menu {
-  border: 1px solid #AC0016;
-}
-
-.context-menu li {
-  color: #AC0016;
-  border-bottom: 1px solid #AC0016;
-}
-
-.context-menu:before {
-  border-bottom: 7px solid #AC0016;
-}
-
-.context-menu-smileys li {
-  border: 0;
 }
 
 .reply.channel {
@@ -357,30 +376,25 @@ a.close-link:hover {
   color: #AC0016 !important;
 }
 
-section.main.sub {
-  width: 100%;
+/* ------------------------------------- CONTEXT MENU ------------------------------------- */
+.context-menu {
+  border: 1px solid #AC0016;
 }
 
-.click-to-flash-teaser {
-  background-image: url(click_to_flash_teaser.png) !important;
-}
-
-#single-login {
-  margin: 0;
-  padding-top: 40px;
-  top: auto;
-  position: static;
-  width: auto;
-}
-
-#login h1 {
+.context-menu li {
   color: #AC0016;
-}
-
-header.login {
   border-bottom: 1px solid #AC0016;
 }
 
+.context-menu:before {
+  border-bottom: 7px solid #AC0016;
+}
+
+.context-menu-smileys li {
+  border: 0;
+}
+
+/* ------------------------------------- BUTTON ------------------------------------- */
 button,
 button:after,
 button:hover {
@@ -433,6 +447,7 @@ button.loading:before {
   background-image: url(loading_indicator_small.gif);
 }
 
+/* ------------------------------------- MODAL DIALOGS ------------------------------------- */
 .modal-window-dialog {
   background: #fff;
   border: 0;
@@ -443,4 +458,17 @@ button.loading:before {
   background: #AC0016;
   background: url(butterflies.png) no-repeat right center, -moz-linear-gradient(100% 100% 90deg, #AC0016, #e2737d);
   background: url(butterflies.png) no-repeat right center, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e2737d), to(#AC0016));
+}
+
+/* ------------------------------------- MISCELLANEOUS ------------------------------------- */
+.click-to-flash-teaser {
+  background-image: url(click_to_flash_teaser.png) !important;
+}
+
+a.close-link {
+  color: #fff !important;
+}
+
+a.close-link:hover {
+  background: #AC0016;
 }
