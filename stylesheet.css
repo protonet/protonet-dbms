@@ -145,8 +145,10 @@ section.main.sub {
 /* ------------------------------------- CHANNELS ------------------------------------- */
 #channels {
   position: absolute;
-  top: 10px;
-  left: 210px;
+  left: 198px;
+  top: 0;
+  right: 26%;
+  bottom: ;
   padding: 0;
   margin: 0;
   border: 0;
@@ -158,6 +160,9 @@ section.main.sub {
 
 #channels ul {
   overflow: auto;
+  display: table-cell;
+  vertical-align: bottom;
+  height: 46px;
 }
 
 #channels .badge {
@@ -165,25 +170,54 @@ section.main.sub {
 }
 
 #channels li a,
-#channels li a:active {
-  width: 107px;
-  height: 21px;
+#channels li a:before,
+#channels li a:active,
+#channels .active:before,
+#channels .active {
+  background: #AC0016 url(tab_new.png) no-repeat;
+}
+
+#channels li {
+  margin: 1px 0 0 8px !important;
+  display: inline-block;
+}
+
+#channels li a:before {
+  width: 7px;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: -7px;
   display: block;
+  position: absolute;
+  background-position: 0 0;
+}
+
+#channels li a {
+  width: auto;
+  position: relative;
+  background-position: right 0;
+  height: 18px;
+  display: block;
+  float: none;
   border: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  text-align: center;
-  background: url(tab.png) no-repeat -107px 0;
   font-weight: bold;
-  font-size: 14px;
-  padding: 9px 0 0;
+  font-size: 12px;
+  padding: 4px 7px 0 0;
   line-height: inherit;
 }
 
 #channels li a:hover,
 #channels .active {
-  background: url(tab.png) no-repeat 0 0;
+  background-position: right bottom;
+}
+
+#channels li a:hover:before,
+#channels .active:before {
+  background-position: 0 bottom;
 }
 
 #channels li a,
