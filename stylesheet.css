@@ -37,7 +37,7 @@ header .monster {
 }
 
 header .logo {
-  background: url(logo_small.png) no-repeat;
+  background: url(logo_flirtrooms.png) no-repeat;
   left: 13px;
   top: 0;
 }
@@ -161,6 +161,7 @@ section.main.sub {
 
 #channels ul {
   overflow: auto;
+  height: 46px;
   display: table-cell;
   vertical-align: bottom;
 }
