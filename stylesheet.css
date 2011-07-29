@@ -152,6 +152,8 @@ section.main.sub {
   padding: 0;
   margin: 0;
   border: 0;
+  overflow: auto;
+  height: 46px;
 }
 
 #manage-channels {
@@ -162,7 +164,6 @@ section.main.sub {
   overflow: auto;
   display: table-cell;
   vertical-align: bottom;
-  height: 46px;
 }
 
 #channels .badge {
