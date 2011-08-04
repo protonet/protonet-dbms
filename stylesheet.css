@@ -123,15 +123,12 @@ section.main.sub {
 #user-widget li a {
   font-size: 14px;
   line-height: 24px;
+  background: url(user.png) 0 0 no-repeat;
+  padding-left: 32px;
 }
 
 #user-widget ul {
-  min-height: 300px;
-}
-
-#user-widget li a {
-  background: url(user.png) 0 0 no-repeat;
-  padding-left: 32px;
+  height: auto;
 }
 
 #user-widget li.online a {
