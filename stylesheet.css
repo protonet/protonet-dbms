@@ -172,7 +172,7 @@ section.main.sub {
 #channels li a:active,
 #channels .active:before,
 #channels .active {
-  background: #AC0016 url(tab_new.png) no-repeat;
+  background: #AC0016 url(tab_new.png?v=2) no-repeat;
 }
 
 #channels li {
@@ -382,6 +382,22 @@ section.main.sub {
 .text-extension-results.flash .media a:active:after,
 .text-extension-results.flash .media a:hover:after {
   background: #AC0016;
+}
+
+.text-extension-results .media iframe {
+  width: 510px;
+}
+
+.text-extension-results.flash object {
+  width: 512px;
+}
+
+#text-extension-preview .text-extension-results .media iframe {
+  width: 501px;
+}
+
+#text-extension-preview .text-extension-results.flash object {
+  width: 503px;
 }
 
 .meep-loading-indicator {
