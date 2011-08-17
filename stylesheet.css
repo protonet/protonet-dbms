@@ -520,3 +520,7 @@ a.close-link {
 a.close-link:hover {
   background: #AC0016;
 }
+
+.flash-message > p {
+  width: auto;
+}
