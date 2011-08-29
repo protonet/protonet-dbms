@@ -123,12 +123,16 @@ section.main.sub {
 #user-widget li a {
   font-size: 14px;
   line-height: 24px;
-  background: url(user.png) 0 0 no-repeat;
+  background: url(spr_user.png?v=1) 0 0 no-repeat;
   padding-left: 32px;
 }
 
 #user-widget ul {
   height: auto;
+}
+
+#user-widget li a {
+  background-position: 3px -43px;
 }
 
 #user-widget li.online a {
@@ -168,8 +172,14 @@ section.main.sub {
 }
 
 #channels li a,
+#channels .rendezvous,
+#channels .rendezvous:before,
+#channels .rendezvous.typing:before,
+#channels .rendezvous:active,
+#channels .rendezvous:focus,
 #channels li a:before,
 #channels li a:active,
+#channels li a:focus,
 #channels .active:before,
 #channels .active {
   background: #AC0016 url(tab_new.png?v=2) no-repeat;
@@ -180,18 +190,22 @@ section.main.sub {
   display: inline-block;
 }
 
+#channels li .rendezvous:before,
 #channels li a:before {
   width: 7px;
+  height: auto;
   content: "";
   top: 0;
   bottom: 0;
+  margin: 0;
   left: -7px;
   display: block;
   position: absolute;
   background-position: 0 0;
 }
 
-#channels li a {
+#channels li a,
+#channels .rendezvous {
   width: auto;
   position: relative;
   background-position: right 0;
@@ -209,18 +223,24 @@ section.main.sub {
 }
 
 #channels li a:hover,
+#channels .rendezvous:hover,
 #channels .active {
   background-position: right bottom;
 }
 
 #channels li a:hover:before,
-#channels .active:before {
+#channels .active:before,
+#channels .active.rendezvous:before,
+#channels .rendezvous:hover:before {
   background-position: 0 bottom;
 }
 
 #channels li a,
+#channels .rendezvous,
 #channels li a:hover,
-#channels .active {
+#channels .rendezvous:hover,
+#channels .active,
+#channels .active.rendezvous {
   color: #fff;
 }
 
@@ -231,9 +251,37 @@ section.main.sub {
   margin-top: 0;
 }
 
-#channels .badge {
-  padding: 2px;
-  background: #AC0016;
+#channels .rendezvous {
+  padding-left: 16px;
+  padding-right: 23px;
+}
+
+#channels .rendezvous:after {
+  background: url(spr_user_status.png) no-repeat 0 -20px;
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  left: -3px;
+  width: 16px;
+  height: 16px;
+}
+
+#channels .rendezvous.online:after {
+  background-position: 0 0;
+}
+
+#channels .rendezvous.typing:after {
+  background-position: 0 -45px;
+}
+
+#channels .hide-link {
+  opacity: 1;
+  margin-top: -7px !important;
+}
+
+#channels .badge-container {
+  right: 0;
 }
 
 /* ------------------------------------- MESSAGE FORM ------------------------------------- */
@@ -523,4 +571,16 @@ a.close-link:hover {
 
 .flash-message > p {
   width: auto;
+}
+
+#textarea-wrapper menu [data-extension="sound"] {
+  background: url(spr_sound.png?v=1) no-repeat;
+}
+
+#textarea-wrapper menu .sound-on {
+  background-position: center 4px;
+}
+
+#textarea-wrapper menu .sound-off {
+  background-position: center -32px;
 }
