@@ -490,6 +490,14 @@ section.main.sub {
   border: 0;
 }
 
+.context-menu-users {
+  margin-right: -67px;
+}
+
+.context-menu-users:before {
+  left: 17px;
+}
+
 /* ------------------------------------- BUTTON ------------------------------------- */
 button,
 button:after,
@@ -578,9 +586,9 @@ a.close-link:hover {
 }
 
 #textarea-wrapper menu .sound-on {
-  background-position: center 4px;
+  background-position: center 5px;
 }
 
 #textarea-wrapper menu .sound-off {
-  background-position: center -32px;
+  background-position: center -29px;
 }
