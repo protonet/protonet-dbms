@@ -167,30 +167,17 @@ section.main.sub {
   vertical-align: bottom;
 }
 
-#channels .badge {
-  background: #AC0016;
-}
-
-#channels li a,
-#channels .rendezvous,
-#channels .rendezvous:before,
-#channels .rendezvous.typing:before,
-#channels .rendezvous:active,
-#channels .rendezvous:focus,
-#channels li a:before,
-#channels li a:active,
-#channels li a:focus,
-#channels .active:before,
-#channels .active {
-  background: #AC0016 url(tab_new.png?v=2) no-repeat;
-}
-
 #channels li {
   margin: 1px 0 0 8px !important;
   display: inline-block;
 }
 
-#channels li .rendezvous:before,
+#channels li a,
+#channels li a:before {
+  background: #AC0016 url(tab_new.png?v=2) no-repeat !important;
+}
+
+#channels li a.rendezvous:before,
 #channels li a:before {
   width: 7px;
   height: auto;
@@ -201,14 +188,14 @@ section.main.sub {
   left: -7px;
   display: block;
   position: absolute;
-  background-position: 0 0;
+  background-position: 0 0 !important;
 }
 
 #channels li a,
-#channels .rendezvous {
+#channels li a.rendezvous {
   width: auto;
   position: relative;
-  background-position: right 0;
+  background-position: right 0 !important;
   height: 18px;
   display: block;
   float: none;
@@ -223,41 +210,33 @@ section.main.sub {
 }
 
 #channels li a:hover,
-#channels .rendezvous:hover,
-#channels .active {
-  background-position: right bottom;
+#channels li a.active {
+  background-position: right bottom !important;
 }
 
 #channels li a:hover:before,
-#channels .active:before,
-#channels .active.rendezvous:before,
-#channels .rendezvous:hover:before {
-  background-position: 0 bottom;
+#channels li a.active:before {
+  background-position: 0 bottom !important;
 }
 
-#channels li a,
-#channels .rendezvous,
-#channels li a:hover,
-#channels .rendezvous:hover,
-#channels .active,
-#channels .active.rendezvous {
-  color: #fff;
+#channels li a {
+  color: #fff !important;
 }
 
-#channels .active,
-#channels .active:hover {
+#channels li a.active,
+#channels li a.active:hover {
   border: 0;
   line-height: inherit;
   margin-top: 0;
 }
 
-#channels .rendezvous {
+#channels li a.rendezvous {
   padding-left: 16px;
   padding-right: 23px;
 }
 
-#channels .rendezvous:after {
-  background: url(spr_user_status.png) no-repeat 0 -20px;
+#channels li a.rendezvous:after {
+  background: url(spr_user_status.png) no-repeat 0 -20px !important;
   content: "";
   position: absolute;
   top: 50%;
@@ -267,12 +246,12 @@ section.main.sub {
   height: 16px;
 }
 
-#channels .rendezvous.online:after {
-  background-position: 0 0;
+#channels li a.rendezvous.online:after {
+  background-position: 0 0 !important;
 }
 
-#channels .rendezvous.typing:after {
-  background-position: 0 -45px;
+#channels li a.rendezvous.typing:after {
+  background-position: 0 -45px !important;
 }
 
 #channels .hide-link {
