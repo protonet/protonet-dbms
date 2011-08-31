@@ -17,7 +17,7 @@ $(function() {
     click:            function() {
       soundOn = !soundOn;
       this.className = getCssClass();
-      protonet.user.Config.set("sound", false);
+      protonet.user.Config.set("sound", soundOn);
     }
   }).appendTo("#message-form menu");
 });
