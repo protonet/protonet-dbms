@@ -28,8 +28,19 @@ a:hover {
 .widget .resize,
 .manage-channels,
 .getting-started,
-header .monster {
+header .monster,
+.meep.focus:before,
+.meep.focus:after,
+.meep .detail-view-link,
+.meep .share-link {
   display: none !important;
+}
+
+/* ------------------------------------- RESET BORDER RADIUS ------------------------------------------- */
+.meep {
+  border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
 }
 
 /* ------------------------------------- RESET BORDER/MARGIN/PADDING ------------------------------------- */
@@ -66,18 +77,25 @@ header .monster {
 
 /* ------------------------------------- SCAFFOLD ------------------------------------- */
 header {
-  height: 46px;
+  height: 60px;
   overflow: hidden;
 }
 
 header .logo {
   background: url(logo_flirtrooms.png) no-repeat;
   left: 13px;
-  top: 0;
+  top: 14px;
 }
 
 header.login {
   border-bottom: 1px solid #AC0016;
+}
+
+header .hearts {
+  left: 20px;
+  text-shadow: 1px 1px 1px #fff;
+  z-index: -1;
+  font-size: 15px;
 }
 
 .main-content {
@@ -124,10 +142,9 @@ header.login {
 .widget h3 {
   color: #999;
   background: url(butterflies.png) no-repeat right center;
-  line-height: 30px;
   font-size: 18px;
   font-weight: bold;
-  padding: 16px 11px 0;
+  padding: 6px 11px 0;
 }
 
 #user-widget li a {
@@ -153,12 +170,12 @@ header.login {
   top: 0;
   right: 26%;
   overflow: auto;
-  height: 46px;
+  height: 60px;
 }
 
 #channels ul {
   overflow: auto;
-  height: 46px;
+  height: 60px;
   display: table-cell;
   vertical-align: bottom;
 }
@@ -191,25 +208,13 @@ header.login {
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f7e5e7), to(#fff));
 }
 
-#channels .hide-link {
-  background: none;
-  margin-top: -6px;
+#channels .hide-link:before {
+  top: 1px;
+  font-family: Verdana, sans-serif;
 }
 
-#channels .active + .hide-link {
-  margin-top: -8px;
-}
-
-#channels .active + .hide-link:after {
+#channels .active + .hide-link:before {
   color: #fff;
-}
-
-#channels .hide-link:after {
-  padding-left: 3px;
-  content: "×";
-  font-weight: bold;
-  font-size: 12px;
-  color: #000;
 }
 
 
@@ -284,6 +289,10 @@ header.login {
 
 
 /* ------------------------------------- MESSAGES ------------------------------------- */
+.meep .author {
+  background: none !important;
+}
+
 .meep,
 .text-extension-results,
 #message-form textarea {
@@ -292,16 +301,10 @@ header.login {
 
 .meep {
   font-size: 12px;
-  box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
-  -webkit-border-radius: 0 !important;
   background: #fff !important;
   border: 0;
   border-bottom: 1px solid #AC0016;
-  padding: 5px;
+  padding: 0;
   padding-left: 57px;
   margin: 0 0 0 1px;
 }
@@ -318,23 +321,6 @@ header.login {
 
 .meep .avatar img {
   padding: 0;
-}
-
-.meep article:nth-last-child(2) {
-  background-image: none !important;
-  padding-bottom: 0;
-}
-
-.meep [data-meep-action] {
-  display: none;
-}
-
-.meep.focus:before {
-  display: none;
-}
-
-.meep.separator:after {
-  display: none;
 }
 
 .text-extension-results.flash .media a:active:after,
