@@ -1,4 +1,7 @@
 $(function() {
+  // Bring the visitor into the right mood
+  protonet.trigger("monster.in_love");
+  
   // Add sound on/off button only when browser supports playing Audio
   if (!window.Audio) {
     return;

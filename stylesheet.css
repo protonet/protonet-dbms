@@ -92,6 +92,7 @@ header.login {
 }
 
 header .hearts {
+  color: #AC0016;
   left: 20px;
   text-shadow: 1px 1px 1px #fff;
   z-index: -1;
