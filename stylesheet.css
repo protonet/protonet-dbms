@@ -306,7 +306,7 @@ header .hearts {
   border-bottom: 1px solid #AC0016;
   padding: 0;
   padding-left: 57px;
-  margin: 0 0 0 1px;
+  margin: 0;
 }
 
 .meep .avatar {
@@ -395,56 +395,18 @@ header .hearts {
 }
 
 /* ------------------------------------- BUTTON ------------------------------------- */
-button,
-button:after,
-button:hover {
-  background: url(button.png) no-repeat 0 0;
-}
-
-button:hover {
-  background-position: 0 bottom;
-}
-
-button:hover:after {
-  background-position: right bottom;
-}
-
+.button,
 button {
-  font: inherit;
-  font-weight: bold;
-  color: #fff !important;
-  text-shadow: none;
-  margin: 0;
-  border: 0;
-  font-size: 14px;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  height: 27px;
-  padding: 0 0 0 20px;
-  overflow: visible;
-  vertical-align: middle;
+  background: #eeccd0; /* 20% of #f7e5e7 */
+  background: -moz-linear-gradient(top, #fff, #f7e5e7);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#f7e5e7));
 }
 
-button:after {
-  display: inline-block;
-  vertical-align: middle;
-  content: "";
-  width: 20px;
-  height: 27px;
-  background-color: #fff;
-  background-position: right top;
-}
-
-button:disabled {
-  opacity: 1;
-}
-
-button.loading:before {
-  background-image: url(loading_indicator_small.gif);
+.button:active,
+button:active,
+button.active {
+  background: -moz-linear-gradient(top, #f7e5e7, #fff);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f7e5e7), to(#fff));
 }
 
 /* ------------------------------------- MODAL DIALOGS ------------------------------------- */
