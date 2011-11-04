@@ -349,6 +349,11 @@ header .hearts {
   background: url(loading_indicator.gif) center center no-repeat;
 }
 
+.text-extension-results.flash .media a:hover:after,
+.text-extension-results.iframe .media a:hover:after {
+  background: #AC0016;
+}
+
 .reply.channel {
   background: #f2736a !important;
   color: #fff !important;
@@ -410,14 +415,9 @@ button.active {
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f7e5e7), to(#fff));
 }
 
-/* ------------------------------------- MODAL DIALOGS ------------------------------------- */
-.modal-window-dialog {
-  background: #fff;
-  border: 0;
-}
-
-.modal-window-dialog > h2 {
+.subpage h1 {
   padding: 10px;
+  line-height: 36px;
   background: #AC0016;
   background: url(butterflies.png) no-repeat right center, -moz-linear-gradient(100% 100% 90deg, #AC0016, #e2737d);
   background: url(butterflies.png) no-repeat right center, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e2737d), to(#AC0016));
