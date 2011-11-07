@@ -122,7 +122,7 @@ header .hearts {
   bottom: 0;
   position: fixed;
   width: 26%;
-  background: rgba(172, 0, 22, 0.04);
+  background: #fcf5f6;
 }
 
 /* ------------------------------------- USER WIDGET ------------------------------------- */
