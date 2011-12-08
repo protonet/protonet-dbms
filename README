@@ -1,2 +1,5 @@
 CSS and images for the "Du bist mir sympathisch" facebook/studiVZ app.
 https://apps.facebook.com/du-bist-mir-sympath/
+
+These assets are included via the "Customize interface" option in the protonet administration.
+Please upload your assets to the server after changing and make sure to manually versionize the include script/style include statements by counting up the ?v=X param in the url. 
